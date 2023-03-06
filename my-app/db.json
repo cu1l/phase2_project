@@ -6,7 +6,7 @@
         "description": "Beautiful landscape in the center of manhattan!" ,
         "nearby_hotels": {},
         "activities_nearby": {},
-        "users": {}
+        "users": [{"username": "ghobbs", "password": "hello!"}]
         },
         {
         "name": "Statue of Liberty",
@@ -14,15 +14,15 @@
         "description": "A large statue that symbolizes freedom gifted by France to the United States!" ,
         "nearby_hotels": {},
         "activities_nearby": {},
-        "users": {}
+        "users": [{"username": "someone", "password": "hello!"}]
         },
         {
         "name": "Test",
         "image": "test",
         "description": "Test" ,
         "nearby_hotels": {},
-        "activities_nearby": {},
-        "users": {}
+        "activities_nearby": [],
+        "users": []
         }
     ]
 }

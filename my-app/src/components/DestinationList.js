@@ -3,8 +3,8 @@ import Card from './Card'
 
 function ListDestinations({destinations}) {
     console.log(destinations)
-    const destList = destinations.map((destination) => {
-        return <Card destination={destination}/>
+    const destList = destinations.map((destination, index) => {
+        return <Card key={index} destination={destination}/>
     })
 
     return (
