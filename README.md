@@ -1,6 +1,6 @@
 # phase2_project
 
-Our idea equips users with travel information on national parks and landmarks. Yosemite, Grand Canyon, Zion, Joshua Tree, etc. For more popular destinations, we'll  include local parks and landmarks (i.e. for New York - Niagra Falls, Central Park, Statue of Liberty).
+Our idea equips users with travel information on national parks and landmarks. Yosemite, Grand Canyon, Zion, Joshua Tree, etc. For more popular destinations, we'll  include more sites (i.e. for New York - Niagra Falls, Central Park, Statue of Liberty).
 
 
 https://wireframe.cc/Eq07qP
