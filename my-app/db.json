@@ -4,8 +4,8 @@
       "name": "Central Park",
       "image": "https://media.istockphoto.com/id/1309037300/photo/central-park-in-spring.jpg?b=1&s=170667a&w=0&k=20&c=nTMGmhXEwkB_s9gglwFX9qz74RbjG9caQryz36l02Sc=",
       "description": "Beautiful landscape in the center of Manhattan.",
-      "nearby_hotels": {},
-      "activities_nearby": {},
+      "nearby_hotels": [],
+      "activities_nearby": [],
       "users": [
         {
           "username": "ghobbs",
@@ -22,8 +22,8 @@
       "name": "Statue of Liberty",
       "image": "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?cs=srgb&dl=pexels-pixabay-64271.jpg&fm=jpg",
       "description": "A large statue that symbolizes freedom gifted by France to the United States.",
-      "nearby_hotels": {},
-      "activities_nearby": {},
+      "nearby_hotels": [],
+      "activities_nearby": [],
       "users": [
         {
           "username": "someone",
@@ -36,7 +36,7 @@
       "name": "Test",
       "image": "test",
       "description": "Test",
-      "nearby_hotels": {},
+      "nearby_hotels": [],
       "activities_nearby": [],
       "users": [],
       "id": 3
