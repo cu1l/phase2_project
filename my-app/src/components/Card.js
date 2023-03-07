@@ -1,13 +1,19 @@
 import React, { useState } from "react"
 
 function Card({ destination }) {
+    const [favorite, setFavorite] = useState("false")
+
+    const togglefav = () => {
+        setFavorite(!favorite)
+        console.log(favorite)
+    }
 
     const {name, image, description} = destination
 
     return (
         <div className="ui card">
-            <div className="image">
-                <img src={image} />
+            <div className="ui medium centered image">
+                <img className="ui image" src={image} />
             </div>
             <div className="content">
                 <a className="header">{name}</a>
@@ -16,9 +22,8 @@ function Card({ destination }) {
                 </div>
             </div>
             <div className="extra content">
-                <span className="right floated star">
-                <i className="star icon"></i>
-                Favorite
+                <span className="right floated star icon" onClick={togglefav}>
+                <i className={favorite ? "star icon" : "yellow star icon"}></i>
                 </span>
             </div>
         </div>
