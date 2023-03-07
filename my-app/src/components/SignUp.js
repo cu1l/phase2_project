@@ -5,7 +5,8 @@ import { useState } from "react";
 function SignUp({ handleNewAccount }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [isCreated, setIsCreated] = useState(false)
+    const [isCreated, setIsCreated] = useState(false);
+    const [firstFavorite, setFirstFavorite] = useState("");
 
     function createAccount(event) {
         event.preventDefault();
@@ -14,19 +15,20 @@ function SignUp({ handleNewAccount }) {
             password: password
         }
 
-        handleNewAccount(newUser);
+        handleNewAccount(newUser, firstFavorite);
 
     }
+
 
     const message = <div id="first-favorite-radio">
         <p>Pick a place to begin.</p>
         <div id="first-place-selections">
             <div className="ui radio checkbox">
-                <input type="radio" name="drone" />
+                <input type="radio" name="locations" value="Statue of Liberty" onClick={(event) => setFirstFavorite(event.target.value)}/>
                 <label>Statue of Liberty</label>
             </div>
             <div className="ui radio checkbox">
-                <input type="radio" name="drone" />
+                <input type="radio" name="locations" value="Central Park" onClick={(event) => setFirstFavorite(event.target.value)} />
                 <label>Central Park</label>
             </div>
         </div>
