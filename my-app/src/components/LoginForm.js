@@ -20,14 +20,14 @@ function LoginForm({logIn}) {
 
     return (
         <div id="login">
-            <p>Welcome. <br/>Log in to see travel destinations.</p>
+            <div id="login-welcome"><h3>Welcome. </h3><p>Log in for travel inspiration.</p></div>
             <form className="ui form" onSubmit={(event) => handleSubmit(event)}>
                 <div className="field">
                     <input type="text" placeholder="Username" value={username} onChange={(event) => setUsername(event.target.value)} />
                     <input type="password" name="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
-                <div className="field">
-                    <button className="ui button">Sign In</button>
+                <div className="field" id="sign-in-button-container">
+                    <button className="ui button">Sign In</button><p> No account? Sign up <a href={"/signup"}>here.</a></p>
                 </div>
 
             </form>

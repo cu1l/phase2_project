@@ -13,10 +13,56 @@ code {
 }
 
 #login {
+  background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url('https://i.pinimg.com/originals/42/3b/53/423b536e4d3658c63e8ff29256da5d34.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 15px;
   display: block;
+  width: 350px;
+  height: 300px;  
+
+}
+
+#login-welcome {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: small;
+}
+
+
+#sign-in-button-container p {
+  margin-top: 10px;
+}
+
+#signup {
+  font-size: small;
   width: 230px;
 }
 
-#login p {
+
+#signup label {
+  color: white;
+  justify-content: left;
+}
+
+
+.description {
   font-size: small;
+}
+
+#first-favorite-radio input {
+  text-align: left;
+
+}
+
+#first-favorite-radio p {
+  margin: 10px;
+
+}
+
+#first-place-selections {
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
