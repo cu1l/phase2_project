@@ -37,13 +37,12 @@ function App() {
           const users = destinationsArray[i].users;
           found = users.find((user) => (user.username === enteredUser.username && user.password === enteredUser.password));
 
-          if (found !== undefined) break;
-        }
-
-        if (found !== undefined) {
-          setIsLoggedIn(true);
-          setUserInfo(enteredUser);
-          navigate('/');
+          if (found !== undefined) {
+            setIsLoggedIn(true);
+            setUserInfo(enteredUser);
+            navigate('/');
+            break;
+          }
         }
 
       })
@@ -53,13 +52,11 @@ function App() {
   function handleNewAccount(newUser, firstFavoriteName) {
     setUserInfo(newUser);
     setIsLoggedIn(true);
-    //addFirstFavorite(firstFavoriteName);
 
     const location = destinations.filter((destination) => (destination.name === firstFavoriteName))
 
     if (location.length > 0) {
       const users = location[0].users;
-      
 
       fetch(destinationAPI + '/' + location[0].id.toString(), {
         method: "PATCH",
@@ -69,13 +66,10 @@ function App() {
         })
 
       })
-
-
     }
-    
+
     navigate('/');
-    console.log('we are working!')
-    console.log(newUser);
+
   }
 
 
