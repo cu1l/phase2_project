@@ -32,20 +32,25 @@ function App() {
   function logIn(enteredUser) {
     fetch(grabUsers)
       .then((resp) => resp.json())
-      .then((setAccounts))
+      .then((accounts) => {
+        setAccounts(accounts);
 
-    let user;
-    for(const account of accounts) {
-      if(enteredUser.username == account.username) {
-        user = account;
-      }
-    }
+        let user;
+        for (const account of accounts) {
+          if (enteredUser.username === account.username) {
+            user = account;
+          }
+        }
+    
+        if (user !== undefined && enteredUser.username === user.username && enteredUser.password === user.password){
+          setIsLoggedIn(true);
+          setUserInfo(user)
+          navigate('/');
+        }
 
-    if(enteredUser.username == user.username && enteredUser.password == user.password){
-      setIsLoggedIn(true);
-      setUserInfo(user)
-      navigate('/');
-    }
+      })
+
+
   }
 
 
