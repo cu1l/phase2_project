@@ -79,7 +79,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn && <Route path="/" element={<CardContainer />} />}
+          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username}/>} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>

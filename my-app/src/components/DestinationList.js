@@ -13,4 +13,4 @@ function ListDestinations({destinations}) {
         </div>
     )
 }
-export default ListDestinations
+export default ListDestinations;

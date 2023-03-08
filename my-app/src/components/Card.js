@@ -16,7 +16,7 @@ function Card({ destination }) {
                 <img className="ui image" src={image} />
             </div>
             <div className="content">
-                <a className="header">{name}</a>
+                <a id="place-name" className="header">{name}</a>
                 <div className="description">
                     <p>{description}</p>
                 </div>
@@ -30,4 +30,4 @@ function Card({ destination }) {
     )
 }
 
-export default Card
+export default Card;
