@@ -123,3 +123,8 @@ code {
 #card i {
   font-size: medium;
 }
+
+#card a {
+  font-family: "Degular Display";
+  font-size: larger;
+}
