@@ -8,7 +8,6 @@ import { useState, useEffect } from 'react';
 import SignUp from './SignUp';
 
 
-
 function App() {
   const destinationAPI = "http://localhost:4001/destinations"
   const [destinations, setDestinations] = useState([]);
@@ -24,6 +23,8 @@ function App() {
         setDestinations(destinationsArray);
       })
   }, [])
+
+
 
 
   function logIn(enteredUser) {
@@ -73,13 +74,12 @@ function App() {
   }
 
 
-
   return (
     <div className="App">
       <header className="App-header">
         <Routes>
           <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username}/>} />}
+          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username} />} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>
