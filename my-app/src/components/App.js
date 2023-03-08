@@ -11,6 +11,8 @@ import SignUp from './SignUp';
 
 function App() {
   const destinationAPI = "http://localhost:4001/destinations"
+  const grabUsers = "http://localhost:4001/users"
+  const [accounts, setAccounts] = useState([])
   const [destinations, setDestinations] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState({});
@@ -27,25 +29,22 @@ function App() {
 
 
   function logIn(enteredUser) {
-    fetch(destinationAPI)
+    fetch(grabUsers)
       .then((resp) => resp.json())
-      .then((destinationsArray) => {
+      .then((setAccounts))
 
-        let found;
+    let user;
+    for(const account of accounts) {
+      if(enteredUser.username == account.username) {
+        user = account;
+      }
+    }
 
-        for (let i = 0; i < destinationsArray.length; i++) {
-          const users = destinationsArray[i].users;
-          found = users.find((user) => (user.username === enteredUser.username && user.password === enteredUser.password));
-
-          if (found !== undefined) {
-            setIsLoggedIn(true);
-            setUserInfo(enteredUser);
-            navigate('/');
-            break;
-          }
-        }
-
-      })
+    if(enteredUser.username == user.username && enteredUser.password == user.password){
+      setIsLoggedIn(true);
+      setUserInfo(user)
+      navigate('/');
+    }
   }
 
 
