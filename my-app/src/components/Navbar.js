@@ -3,11 +3,11 @@ import React from "react"
 function Navbar({username}) {
 
     return (
-        <div id="navbar" class="ui menu">
-            <a class="item active">
+        <div id="navbar" className="ui menu">
+            <a className="item active">
                 Destinations
             </a>
-            <a class="item">
+            <a className="item">
                 Discover a park or landmark.
             </a>
             <div className="ui icon input small">
@@ -15,7 +15,7 @@ function Navbar({username}) {
                 <i className="search icon"></i>
             </div>
             <a id="welcome-user" className="item right floated">
-                <i class="user circle icon"></i> Welcome, {username}
+                <i className="user circle icon"></i> Welcome, {username}
             </a>
 
         </div>
