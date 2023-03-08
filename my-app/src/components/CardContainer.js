@@ -6,20 +6,27 @@ import Header from "./Header"
 function CardContainer({username}) {
     const destinationAPI = "http://localhost:4001/destinations"
     const [destinations, setDestinations] = useState([])
+    const [searchTerm, setSearchTerm] = useState("");
+
     useEffect(() => {
         fetch(destinationAPI)
             .then(r => r.json())
             .then(setDestinations)
     }, [])
 
+    function handleSearch(event) {
+        setSearchTerm(event.target.value);
+    }
+    
+
     return (
         <div className="ui container">
             <div id="banner">
                 <Header />
-                <Navbar username={username}/>
+                <Navbar username={username} handleSearch={handleSearch}/>
             </div>
-            <div id="grid" className="ui three stackable grid container">
-                <ListDestinations destinations={destinations} />
+            <div id="grid" className="ui three column grid">
+                <ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} />
             </div>
         </div>
     )

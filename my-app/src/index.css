@@ -107,7 +107,7 @@ code {
 
 #grid {
   margin-top: 10px;
-  margin-bottom: 50px;;
+  margin-bottom: 50px;
 }
 
 #banner {
@@ -115,4 +115,11 @@ code {
   background-repeat: none;
   background-size: cover;
   background-position: center;
+}
+#card {
+  min-width: 210px;
+}
+
+#card i {
+  font-size: medium;
 }

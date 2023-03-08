@@ -1,6 +1,7 @@
 import React from "react"
+import { useState } from "react";
 
-function Navbar({username}) {
+function Navbar({username, handleSearch}) {
 
     return (
         <div id="navbar" className="ui menu">
@@ -11,7 +12,7 @@ function Navbar({username}) {
                 Discover a park or landmark.
             </a>
             <div className="ui icon input small">
-                <input className="ui action right icon input" type="text" placeholder="Find a place" />
+                <input className="ui action right icon input" type="text" placeholder="Find a place" onChange={handleSearch}/>
                 <i className="search icon"></i>
             </div>
             <a id="welcome-user" className="item right floated">

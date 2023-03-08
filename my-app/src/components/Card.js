@@ -11,7 +11,7 @@ function Card({ destination }) {
     const {name, image, description} = destination
 
     return (
-        <div className="ui card">
+        <div id="card" className="ui fluid card">
             <div className="ui medium centered image">
                 <img className="ui image" src={image} />
             </div>
