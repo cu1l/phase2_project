@@ -23,6 +23,9 @@ function App() {
       .then((resp) => resp.json())
       .then((destinationsArray) => {
         setDestinations(destinationsArray);
+        if (!isLoggedIn) {
+          navigate('/login');
+        }
       })
   }, [])
 
@@ -104,7 +107,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn ? <Route path="/" element={<CardContainer username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick}/>} /> : <Route path="/login" element={<LoginForm logIn={logIn} />} />}
+          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick}/>} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>
