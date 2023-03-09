@@ -6,29 +6,95 @@
       "image": "https://thumbs.dreamstime.com/b/spring-time-central-park-nyc-17578354.jpg",
       "description": "Beautiful landscape in the center of Manhattan.",
       "nearby_hotels": [],
-      "activities_nearby": []
+      "activities_nearby": [
+        "Walking"
+      ]
     },
     {
       "id": 2,
-      "name": "Statue of Liberty",
-      "image": "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?cs=srgb&dl=pexels-pixabay-64271.jpg&fm=jpg",
-      "description": "A large statue that symbolizes freedom gifted by France to the United States.",
-      "nearby_hotels": [],
-      "activities_nearby": []
-    },
-    {
-      "id": 3,
       "name": "Yellowstone National Park",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg",
       "description": "From hot springs to geysers if you love nature you're going to love Yellowstone!",
       "nearby_hotels": [],
-      "activities_nearby": []
+      "activities_nearby": [
+        "Family Travel",
+        "Wildlife",
+        "Photo Op"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Acadia National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_528766123.jpg?auto=format&q=75&w=1920",
+      "description": "Acadia National Park is the only national park in New England encompasses an unspoiled wilderness of undulating coastal mountains, towering sea cliffs, surf-pounding beaches and quiet ponds.",
+      "nearby_hotels": [],
+      "activities_nearby": [
+        "Beaches",
+        "Cycling",
+        "Walking"
+      ]
     },
     {
       "id": 4,
-      "name": "test",
-      "image": "test",
-      "description": "test",
+      "name": "Statue of Liberty",
+      "image": "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?cs=srgb&dl=pexels-pixabay-64271.jpg&fm=jpg",
+      "description": "A large statue that symbolizes freedom gifted by France to the United States.",
+      "nearby_hotels": [],
+      "activities_nearby": ["Photo Op"]
+    },
+    {
+      "id": 5,
+      "name": "Arches National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_143287558.jpg?auto=format&q=75&w=1920",
+      "description": "Giant sweeping arcs of sandstone frame snowy peaks and desert landscapes; explore the park’s namesake formations in a red-rock wonderland.",
+      "nearby_hotels": [],
+      "activities_nearby": [
+        "Family Travel",
+        "Photo Op",
+        "Walking"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Biscayne National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_1149909450.jpg?auto=format&q=75&w=1920",
+      "description": "A portion of the world’s third-largest reef sits here off the coast of Florida, along with mangrove forests and the northernmost Florida Keys. This is some of the best reef viewing and snorkeling you’ll find in the USA, outside Hawaii and nearby Key Largo.",
+      "nearby_hotels": [],
+      "activities_nearby": [
+        "Family Travel",
+        "Wildlife",
+        "Scenery"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Capitol Reef National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_975165294.jpg?auto=format&q=75&w=1920",
+      "description": "Giant slabs of chocolate-red rock and sweeping yellow sandstone domes dominate the landscape of Capitol Reef, which Indigenous Freemont people called the ‘Land of the Sleeping Rainbow.’",
+      "nearby_hotels": [],
+      "activities_nearby": [
+        "Walking",
+        "Photo Op",
+        "Scenery"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Congaree National Park",
+      "image": "https://lp-cms-production.imgix.net/2020-09/GettyRF_560620781.jpg?auto=format&q=75&w=1920",
+      "description": "Encompassing nearly 27,000 acres, Congaree National Park is the largest expanse of old-growth, bottomland hardwood forest in the southeastern US. The lush trees growing here are some of the tallest in the eastern USA, forming one of the highest temperate deciduous forest canopies left in the world.",
+      "nearby_hotels": [],
+      "activities_nearby": [
+        "Wildlife",
+        "Family Travel",
+        "Walking"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "",
+      "image": "",
+      "description": "",
       "nearby_hotels": [],
       "activities_nearby": []
     }

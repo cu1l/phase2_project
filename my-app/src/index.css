@@ -106,8 +106,11 @@ code {
 }
 
 #grid {
+  height: 520px;
   margin-top: 10px;
   margin-bottom: 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #banner {
@@ -117,7 +120,14 @@ code {
   background-position: center;
 }
 #card {
-  min-width: 210px;
+  padding-top: 1px;
+  min-width: 250px;
+  max-width: 300px;
+
+}
+
+#card img {
+  height: 270px;
 }
 
 #card i {

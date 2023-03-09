@@ -18,7 +18,7 @@ function ListDestinations({ destinations, favorites, handleFavoriteClick }) {
     })
 
     return (
-        <div className="ui three stackable cards">
+        <div className="ui three centered stackable cards">
             {destList}
         </div>
     )

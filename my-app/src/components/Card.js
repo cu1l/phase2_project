@@ -14,7 +14,7 @@ function Card({ destination, isFavorited, handleFavoriteClick}) {
 
 
     return (
-        <div id="card" className="ui fluid card">
+        <div id="card" className="ui card">
             <div className="ui medium centered image">
                 <img className="ui image" src={image} />
             </div>
