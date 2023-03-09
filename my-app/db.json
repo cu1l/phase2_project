@@ -47,7 +47,8 @@
       "password": "hello!",
       "favorites": [
         "Yellowstone National Park",
-        "Statue of Liberty"
+        "Statue of Liberty",
+        "Central Park"
       ],
       "id": 2
     },

@@ -128,3 +128,8 @@ code {
   font-family: "Degular Display";
   font-size: larger;
 }
+
+
+#welcome-user:hover {
+  color: cornflowerblue;
+}
