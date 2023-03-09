@@ -3,47 +3,13 @@ import ListDestinations from './DestinationList'
 import Navbar from "./Navbar"
 import Header from "./Header"
 
-function CardContainer({ username, favorites, handleFavoriteClick }) {
-    const destinationAPI = "http://localhost:4001/destinations"
-    const [destinations, setDestinations] = useState([])
-    const [searchTerm, setSearchTerm] = useState("");
-    const [favoritesOnly, setFavoritesOnly] = useState(false);
-    
-
-    useEffect(() => {
-        fetch(destinationAPI)
-            .then(r => r.json())
-            .then(destinations => {
-                setDestinations(destinations)
-
-                if (favoritesOnly) {
-                    setDestinations([...destinationsDisplayed]);
-                }
-            })
-    }, [favoritesOnly])
-
-    
+function CardContainer({destinations, username, favorites, handleFavoriteClick, toggleFavorites }) {
+    const [searchTerm, setSearchTerm] = useState("");    
 
     function handleSearch(event) {
         setSearchTerm(event.target.value);
     }
 
-    const destinationsDisplayed = [];
-    for (const favorite of favorites) {
-        destinations.forEach((destination) => {
-            if (destination.name === favorite) {
-                destinationsDisplayed.push(destination);
-            }
-        });
-    }
-    
-
-
-
-    function toggleFavorites() {
-        setFavoritesOnly(!favoritesOnly);
-
-    }
 
 
     return (

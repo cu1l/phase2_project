@@ -15,6 +15,7 @@ function App() {
   const [destinations, setDestinations] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState({});
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const navigate = useNavigate();
 
 
@@ -26,8 +27,34 @@ function App() {
         if (!isLoggedIn) {
           navigate('/login');
         }
+
+        let destinationsDisplayed = [];
+        for (const destination of destinations) {
+            for (const favorite of userInfo.favorites) {
+                if (destination.name === favorite) {
+                    destinationsDisplayed.push(destination);
+                }
+    
+    
+            }
+        }
+    
+        if (favoritesOnly) {
+          console.log('destinationsDisplayed', destinationsDisplayed)
+            setDestinations([...destinationsDisplayed]);
+        }
+
+        console.log('destinations', destinations)
+
+
       })
-  }, [])
+  }, [favoritesOnly])
+  
+
+  function toggleFavorites() {
+    setFavoritesOnly(!favoritesOnly);
+
+  }
 
 
 
@@ -76,8 +103,8 @@ function App() {
 
   function handleFavoriteClick(locationName, isFavorited) {
     let newFavorites = userInfo.favorites.filter((favorite) => (favorite !== locationName));
-    console.log(newFavorites, isFavorited)
-    console.log(userInfo)
+    //console.log(newFavorites, isFavorited)
+    //console.log(userInfo)
 
     if (isFavorited) {
       newFavorites = [...userInfo.favorites, locationName]
@@ -106,7 +133,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick}/>} />}
+          {isLoggedIn && <Route path="/" element={<CardContainer destinations={destinations} username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick} toggleFavorites={toggleFavorites}/>} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>

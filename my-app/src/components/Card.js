@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react"
 
 function Card({ destination, isFavorited, handleFavoriteClick}) {
-    const [favorite, setFavorite] = useState(isFavorited)
+    //const [favorite, setFavorite] = useState(isFavorited)
 
     const {name, image, description} = destination;
-    useEffect(() => {
-        handleFavoriteClick(name, favorite);
-    }, [favorite]);
+
 
     const togglefav = () => {
-        setFavorite(!favorite)
+        isFavorited = !isFavorited;
+        //setFavorite(!favorite)
+        handleFavoriteClick(name, isFavorited);
     }
 
 
@@ -26,7 +26,7 @@ function Card({ destination, isFavorited, handleFavoriteClick}) {
             </div>
             <div className="extra content">
                 <span className="right floated star icon" onClick={togglefav}>
-                <i className={favorite ? "yellow star icon" : "star icon"}></i>
+                <i className={isFavorited ? "yellow star icon" : "star icon"}></i>
                 </span>
             </div>
         </div>
