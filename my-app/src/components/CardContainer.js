@@ -3,7 +3,7 @@ import ListDestinations from './DestinationList'
 import Navbar from "./Navbar"
 import Header from "./Header"
 
-function CardContainer({username}) {
+function CardContainer({username, favorites, handleFavoriteClick}) {
     const destinationAPI = "http://localhost:4001/destinations"
     const [destinations, setDestinations] = useState([])
     const [searchTerm, setSearchTerm] = useState("");
@@ -26,7 +26,7 @@ function CardContainer({username}) {
                 <Navbar username={username} handleSearch={handleSearch}/>
             </div>
             <div id="grid" className="ui three column grid">
-                <ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} />
+                <ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} favorites={favorites} handleFavoriteClick={handleFavoriteClick} />
             </div>
         </div>
     )

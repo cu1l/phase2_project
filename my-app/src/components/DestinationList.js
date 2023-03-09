@@ -1,10 +1,19 @@
 import React from "react"
 import Card from './Card'
 
-function ListDestinations({destinations}) {
+function ListDestinations({ destinations, favorites, handleFavoriteClick }) {
+
     console.log(destinations)
     const destList = destinations.map((destination, index) => {
-        return <Card key={index} destination={destination}/>
+        const foundLocation = favorites.find((favorite) => (favorite === destination.name))
+        let isFavorited = false;
+
+        if (foundLocation !== undefined && foundLocation.length > 0) {
+            isFavorited = true;
+        }
+
+        return <Card key={index} destination={destination} isFavorited={isFavorited} handleFavoriteClick={handleFavoriteClick} />
+
     })
 
     return (

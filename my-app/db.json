@@ -36,11 +36,28 @@
   "users": [
     {
       "username": "jake",
-      "password": "test"
+      "password": "test",
+      "favorites": [
+        "Central Park"
+      ],
+      "id": 1
     },
     {
       "username": "ghobbs",
-      "password": "hello!"
+      "password": "hello!",
+      "favorites": [
+        "Yellowstone National Park",
+        "Statue of Liberty"
+      ],
+      "id": 2
+    },
+    {
+      "username": "hello",
+      "password": "another",
+      "favorites": [
+        "Statue of Liberty"
+      ],
+      "id": 3
     }
   ]
 }

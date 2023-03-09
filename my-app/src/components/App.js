@@ -41,8 +41,8 @@ function App() {
             user = account;
           }
         }
-    
-        if (user !== undefined && enteredUser.username === user.username && enteredUser.password === user.password){
+
+        if (user !== undefined && enteredUser.username === user.username && enteredUser.password === user.password) {
           setIsLoggedIn(true);
           setUserInfo(user)
           navigate('/');
@@ -54,28 +54,49 @@ function App() {
   }
 
 
-  function handleNewAccount(newUser, firstFavoriteName) {
+  function handleNewAccount(newUser) {
     setUserInfo(newUser);
     setIsLoggedIn(true);
 
-    const location = destinations.filter((destination) => (destination.name === firstFavoriteName))
 
-    if (location.length > 0) {
-      const users = location[0].users;
+    fetch(grabUsers, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newUser)
 
-      fetch(destinationAPI + '/' + location[0].id.toString(), {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          users: [...users, newUser]
-        })
-
-      })
-    }
+    })
 
     navigate('/');
 
   }
+
+
+  function handleFavoriteClick(locationName, isFavorited) {
+    let newFavorites = userInfo.favorites.filter((favorite) => (favorite !== locationName));
+    console.log(newFavorites, isFavorited)
+    console.log(userInfo)
+
+    if (isFavorited) {
+      newFavorites = [...userInfo.favorites, locationName]
+      setUserInfo({...userInfo, favorites: newFavorites })
+
+    } else {
+      setUserInfo({...userInfo, favorites: newFavorites })
+    }
+
+
+    fetch(grabUsers + '/' + userInfo.id.toString(), {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: userInfo.name,
+        password: userInfo.password,
+        favorites: newFavorites
+      })
+    })
+
+  }
+
 
 
   return (
@@ -83,7 +104,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username} />} />}
+          {isLoggedIn && <Route path="/" element={<CardContainer username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick}/>} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>

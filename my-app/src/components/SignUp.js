@@ -12,10 +12,11 @@ function SignUp({ handleNewAccount }) {
         event.preventDefault();
         const newUser = {
             username: username,
-            password: password
+            password: password,
+            favorites: [firstFavorite]
         }
 
-        handleNewAccount(newUser, firstFavorite);
+        handleNewAccount(newUser);
 
     }
 

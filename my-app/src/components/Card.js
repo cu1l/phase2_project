@@ -1,13 +1,17 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
-function Card({ destination }) {
-    const [favorite, setFavorite] = useState(false)
+function Card({ destination, isFavorited, handleFavoriteClick}) {
+    const [favorite, setFavorite] = useState(isFavorited)
+
+    const {name, image, description} = destination;
+    useEffect(() => {
+        handleFavoriteClick(name, favorite);
+    }, [favorite]);
 
     const togglefav = () => {
         setFavorite(!favorite)
     }
 
-    const {name, image, description} = destination
 
     return (
         <div id="card" className="ui fluid card">
