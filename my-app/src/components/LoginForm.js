@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 
-function LoginForm({logIn}) {
+function LoginForm({logIn, handleSignUpClick}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -27,7 +27,7 @@ function LoginForm({logIn}) {
                     <input type="password" name="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <div className="field" id="sign-in-button-container">
-                    <button className="ui button">Sign In</button><p> No account? Sign up <a href={"/signup"}>here.</a></p>
+                    <button className="ui button">Sign In</button><p> No account? Sign up <a onClick={() => handleSignUpClick()}>here.</a></p>
                 </div>
 
             </form>

@@ -133,3 +133,8 @@ code {
 #welcome-user:hover {
   color: cornflowerblue;
 }
+
+#login a:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}

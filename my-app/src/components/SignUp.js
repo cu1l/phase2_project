@@ -25,8 +25,8 @@ function SignUp({ handleNewAccount }) {
         <p>Pick a place to begin.</p>
         <div id="first-place-selections">
             <div className="ui radio checkbox">
-                <input type="radio" name="locations" value="Statue of Liberty" onClick={(event) => setFirstFavorite(event.target.value)}/>
-                <label>Statue of Liberty</label>
+                <input type="radio" name="locations" value="Yellowstone National Park" onClick={(event) => setFirstFavorite(event.target.value)}/>
+                <label>Yellowstone National Park</label>
             </div>
             <div className="ui radio checkbox">
                 <input type="radio" name="locations" value="Central Park" onClick={(event) => setFirstFavorite(event.target.value)} />

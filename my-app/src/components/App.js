@@ -16,8 +16,8 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState({});
   const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const [signUpClicked, setSignUpClicked] = useState(false);
   const navigate = useNavigate();
-
 
   useEffect(() => {
     fetch(destinationAPI)
@@ -25,23 +25,23 @@ function App() {
       .then((destinationsArray) => {
         setDestinations(destinationsArray);
         if (!isLoggedIn) {
-          navigate('/login');
+          navigate('/login')
         }
 
         let destinationsDisplayed = [];
         for (const destination of destinations) {
-            for (const favorite of userInfo.favorites) {
-                if (destination.name === favorite) {
-                    destinationsDisplayed.push(destination);
-                }
-    
-    
+          for (const favorite of userInfo.favorites) {
+            if (destination.name === favorite) {
+              destinationsDisplayed.push(destination);
             }
+
+
+          }
         }
-    
+
         if (favoritesOnly) {
           console.log('destinationsDisplayed', destinationsDisplayed)
-            setDestinations([...destinationsDisplayed]);
+          setDestinations([...destinationsDisplayed]);
         }
 
         console.log('destinations', destinations)
@@ -49,13 +49,17 @@ function App() {
 
       })
   }, [favoritesOnly])
-  
+
 
   function toggleFavorites() {
     setFavoritesOnly(!favoritesOnly);
 
   }
 
+  function handleSignUpClick() {
+    setSignUpClicked(true);
+    navigate('/signup');
+  }
 
 
 
@@ -103,15 +107,13 @@ function App() {
 
   function handleFavoriteClick(locationName, isFavorited) {
     let newFavorites = userInfo.favorites.filter((favorite) => (favorite !== locationName));
-    //console.log(newFavorites, isFavorited)
-    //console.log(userInfo)
 
     if (isFavorited) {
       newFavorites = [...userInfo.favorites, locationName]
-      setUserInfo({...userInfo, favorites: newFavorites })
+      setUserInfo({ ...userInfo, favorites: newFavorites })
 
     } else {
-      setUserInfo({...userInfo, favorites: newFavorites })
+      setUserInfo({ ...userInfo, favorites: newFavorites })
     }
 
 
@@ -132,8 +134,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Routes>
-          <Route path="/login" element={<LoginForm logIn={logIn} />} />
-          {isLoggedIn && <Route path="/" element={<CardContainer destinations={destinations} username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick} toggleFavorites={toggleFavorites}/>} />}
+          <Route path="/login" element={<LoginForm logIn={logIn} handleSignUpClick={handleSignUpClick} />} />
+          {isLoggedIn && <Route path="/" element={<CardContainer destinations={destinations} username={userInfo.username} favorites={userInfo.favorites} handleFavoriteClick={handleFavoriteClick} toggleFavorites={toggleFavorites} />} />}
           <Route path="/signup" element={<SignUp handleNewAccount={handleNewAccount} />} />
         </Routes>
       </header>

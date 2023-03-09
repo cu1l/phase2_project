@@ -58,6 +58,22 @@
         "Statue of Liberty"
       ],
       "id": 3
+    },
+    {
+      "username": "new",
+      "password": "test",
+      "favorites": [
+        "Yellowstone National Park"
+      ],
+      "id": 4
+    },
+    {
+      "username": "newuser",
+      "password": "test",
+      "favorites": [
+        "Central Park"
+      ],
+      "id": 5
     }
   ]
 }
