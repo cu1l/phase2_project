@@ -18,8 +18,8 @@ function CardContainer({destinations, username, favorites, handleFavoriteClick, 
                 <Header />
                 <Navbar username={username} handleSearch={handleSearch} toggleFavorites={toggleFavorites} />
             </div>
-            <div id="grid" className="ui three column grid">
-                <ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} favorites={favorites} handleFavoriteClick={handleFavoriteClick} />
+            <div id="grid" className="ui grid container">
+                <div className="column"><ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} favorites={favorites} handleFavoriteClick={handleFavoriteClick} /></div>
             </div>
         </div>
     )
