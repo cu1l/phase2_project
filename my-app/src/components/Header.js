@@ -5,7 +5,7 @@ function Header() {
         <div id="header">
             <i id="icon" className="circular suitcase icon"></i>
             <h2 className="ui center aligned icon header" >
-                Travel Logs
+                Landmark Logs
             </h2>
             
             
