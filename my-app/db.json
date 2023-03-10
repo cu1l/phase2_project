@@ -217,6 +217,14 @@
         "Central Park"
       ],
       "id": 5
+    },
+    {
+      "username": "testuser",
+      "password": "hellotester!",
+      "favorites": [
+        "Yellowstone National Park"
+      ],
+      "id": 6
     }
   ]
 }

@@ -22,7 +22,7 @@ function SignUp({ handleNewAccount }) {
 
 
     const message = <div id="first-favorite-radio">
-        <p>Pick a place to begin.</p>
+        <p>Pick a place to begin. <i class="map pin icon"></i></p>
         <div id="first-place-selections">
             <div className="ui radio checkbox">
                 <input type="radio" name="locations" value="Yellowstone National Park" onClick={(event) => setFirstFavorite(event.target.value)}/>

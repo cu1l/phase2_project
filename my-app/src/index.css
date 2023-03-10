@@ -70,8 +70,9 @@ code {
 
 #first-place-selections {
   text-align: left;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-bottom: 10px;
+  width: 200px;
 }
 
 #header {
