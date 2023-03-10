@@ -5,10 +5,10 @@ function Navbar({ username, handleSearch, toggleFavorites }) {
 
     return (
         <div id="navbar" className="ui menu">
-            <a className="item active">
+            <a id="navbar-destinations" className="item active">
                 Destinations
             </a>
-            <a className="item">
+            <a id="navbar-discover" className="item">
                 Discover a park or landmark.
             </a>
             <div className="ui icon input small">

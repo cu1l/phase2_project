@@ -100,10 +100,20 @@ code {
 #place-name {
   font-size: large;
 }
+#place-name:hover {
+  cursor: default;
+}
 
 #navbar {
   margin-bottom: 20px;
 
+}
+#navbar-destinations {
+  cursor: default;
+}
+
+#navbar-discover {
+  cursor: default;
 }
 
 #grid {
