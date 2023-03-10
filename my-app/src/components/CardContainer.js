@@ -11,6 +11,10 @@ function CardContainer({destinations, username, favorites, handleFavoriteClick, 
     }
 
 
+    function makeActivitiesLowerCase(destination) {
+        const lowerCaseActivities = destination.activities_nearby.map((activity) => activity.toLowerCase());
+        return lowerCaseActivities;
+    }
 
     return (
         <div className="ui container">
@@ -19,7 +23,7 @@ function CardContainer({destinations, username, favorites, handleFavoriteClick, 
                 <Navbar username={username} handleSearch={handleSearch} toggleFavorites={toggleFavorites} />
             </div>
             <div id="grid" className="ui grid container">
-                <div className="column"><ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase())))} favorites={favorites} handleFavoriteClick={handleFavoriteClick} /></div>
+                <div className="column"><ListDestinations destinations={destinations.filter((destination) => (destination.name.toLowerCase().includes(searchTerm.toLowerCase()) || (destination.state.toLowerCase().includes(searchTerm.toLowerCase())) || (makeActivitiesLowerCase(destination).includes(searchTerm.toLowerCase())) ) )} favorites={favorites} handleFavoriteClick={handleFavoriteClick} /></div>
             </div>
         </div>
     )
