@@ -5,7 +5,7 @@
       "name": "Central Park",
       "image": "https://thumbs.dreamstime.com/b/spring-time-central-park-nyc-17578354.jpg",
       "description": "Beautiful landscape in the center of Manhattan.",
-      "nearby_hotels": [],
+      "state": "New York",
       "activities_nearby": [
         "Walking"
       ]
@@ -15,7 +15,7 @@
       "name": "Yellowstone National Park",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg",
       "description": "From hot springs to geysers if you love nature you're going to love Yellowstone!",
-      "nearby_hotels": [],
+      "state": "Wyoming",
       "activities_nearby": [
         "Family Travel",
         "Wildlife",
@@ -27,7 +27,7 @@
       "name": "Acadia National Park",
       "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_528766123.jpg?auto=format&q=75&w=1920",
       "description": "Acadia National Park is the only national park in New England encompasses an unspoiled wilderness of undulating coastal mountains, towering sea cliffs, surf-pounding beaches and quiet ponds.",
-      "nearby_hotels": [],
+      "state": "Maine",
       "activities_nearby": [
         "Beaches",
         "Cycling",
@@ -39,15 +39,17 @@
       "name": "Statue of Liberty",
       "image": "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?cs=srgb&dl=pexels-pixabay-64271.jpg&fm=jpg",
       "description": "A large statue that symbolizes freedom gifted by France to the United States.",
-      "nearby_hotels": [],
-      "activities_nearby": ["Photo Op"]
+      "state": "New York",
+      "activities_nearby": [
+        "Photo Op"
+      ]
     },
     {
       "id": 5,
       "name": "Arches National Park",
       "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_143287558.jpg?auto=format&q=75&w=1920",
       "description": "Giant sweeping arcs of sandstone frame snowy peaks and desert landscapes; explore the park’s namesake formations in a red-rock wonderland.",
-      "nearby_hotels": [],
+      "state": "Utah",
       "activities_nearby": [
         "Family Travel",
         "Photo Op",
@@ -59,7 +61,7 @@
       "name": "Biscayne National Park",
       "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_1149909450.jpg?auto=format&q=75&w=1920",
       "description": "A portion of the world’s third-largest reef sits here off the coast of Florida, along with mangrove forests and the northernmost Florida Keys. This is some of the best reef viewing and snorkeling you’ll find in the USA, outside Hawaii and nearby Key Largo.",
-      "nearby_hotels": [],
+      "state": "Florida",
       "activities_nearby": [
         "Family Travel",
         "Wildlife",
@@ -71,7 +73,7 @@
       "name": "Capitol Reef National Park",
       "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_975165294.jpg?auto=format&q=75&w=1920",
       "description": "Giant slabs of chocolate-red rock and sweeping yellow sandstone domes dominate the landscape of Capitol Reef, which Indigenous Freemont people called the ‘Land of the Sleeping Rainbow.’",
-      "nearby_hotels": [],
+      "state": "Utah",
       "activities_nearby": [
         "Walking",
         "Photo Op",
@@ -83,7 +85,7 @@
       "name": "Congaree National Park",
       "image": "https://lp-cms-production.imgix.net/2020-09/GettyRF_560620781.jpg?auto=format&q=75&w=1920",
       "description": "Encompassing nearly 27,000 acres, Congaree National Park is the largest expanse of old-growth, bottomland hardwood forest in the southeastern US. The lush trees growing here are some of the tallest in the eastern USA, forming one of the highest temperate deciduous forest canopies left in the world.",
-      "nearby_hotels": [],
+      "state": "South Carolina",
       "activities_nearby": [
         "Wildlife",
         "Family Travel",
@@ -91,21 +93,96 @@
       ]
     },
     {
-      "id": 8,
-      "name": "",
-      "image": "",
-      "description": "",
-      "nearby_hotels": [],
-      "activities_nearby": []
+      "id": 9,
+      "name": "Death Valley National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_667071142.jpg?auto=format&q=75&w=1024",
+      "description": "In Death Valley, nature is putting on a truly spectacular show: singing sand dunes, water-sculpted canyons, boulders moving across the desert floor, extinct volcanic craters, palm-shaded oases, stark mountains rising to 11,000ft and plenty of endemic wildlife. This is a land of superlatives, holding the US records for hottest temperature (134°F/57°C), lowest point (Badwater, 282ft below sea level) and largest national park outside Alaska (more than 5000 sq miles).",
+      "state": "California",
+      "activities_nearby": [
+        "Scenery",
+        "Walking",
+        "Wildlife"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Denali National Park",
+      "image": "https://lp-cms-production.imgix.net/2020-11/500pxRF_123806719.jpg?auto=format&q=75&w=1024",
+      "description": "Denali, once known as Mt McKinley and to native Athabascans as the Great One, is North America’s highest peak, rightly celebrated as an icon of all that is awesome and wild in a state where those adjectives are ubiquitous. Here, you can peer at a grizzly bear, moose, caribou or even wolves, or trek into 6 million acres of tundra, boreal forest and ice-capped mountains – a space larger than Massachusetts.",
+      "state": "Alaska",
+      "activities_nearby": [
+        "Wildlife",
+        "Scenery",
+        "Walking"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Dry Tortugas National Park",
+      "image": "https://lp-cms-production.imgix.net/2020-11/GettyRF_148337669.jpg?auto=format&q=75&w=1024",
+      "description": "Ponce de León named them Las Tortugas (The Turtles) for the sea turtles that roamed here. A lack of freshwater led sailors to add a ‘dry.’ Today the Dry Tortugas are a national park accessible only by boat or plane. The sparkling waters offer excellent snorkeling and diving opportunities. Stargazing is mind-blowing any time of the year.",
+      "state": "Florida",
+      "activities_nearby": [
+        "History",
+        "Photo Op",
+        "Scenery",
+        "Diving"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Everglades National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_627964952.jpg?auto=format&q=75&w=1024",
+      "description": "Called the ‘River of Grass’ by Native American inhabitants, this is not just a wetland, or a swamp, or a lake, or a river, or a prairie, or a grassland – it is all of those, twisted together into a series of soft horizons, long vistas, sunsets that stretch across your entire field of vision and the toothy grins of a healthy population of dinosaur-era reptiles.",
+      "state": "Florida",
+      "activities_nearby": [
+        "Family Travel",
+        "Wildlife",
+        "Winter Travel"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Gates of the Arctic National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/C53GX9%20(1).jpg?auto=format&q=75&w=1024",
+      "description": "Unchanged in four millennia, this massive preserved space protects a contiguous wilderness that stretches for over 27,000 sq miles – the equivalent of nearly two Switzerlands – harboring no roads, no cell-phone coverage and a population of precisely zero.",
+      "state": "Alaska",
+      "activities_nearby": [
+        "Wildlife",
+        "Photo Op",
+        "Scenery"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Gateway Arch National Park",
+      "image": "https://lp-cms-production.imgix.net/2021-04/GettyRF_1059031404.jpg?auto=format&q=75&w=1024",
+      "description": "Gateway Arch may be one of the smallest national parks in the US (and one of the only urban parks), but its main attraction, the Gateway Arch, is the largest manmade monument in the US. It stands 630ft high and symbolizes St Louis' historical role as 'Gateway to the West.'",
+      "state": "Missouri",
+      "activities_nearby": [
+        "History",
+        "Family Travel",
+        "Photo Op"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Glacier Bay National Park",
+      "image": "https://lp-cms-production.imgix.net/2020-09/GettyRF_555743985.jpg?auto=format&q=75&w=1024",
+      "description": "Seven tidewater glaciers spill out of the mountains and fill the sea with icebergs of all shapes, sizes and shades of blue, making Glacier Bay National Park and Preserve an icy wilderness renowned worldwide.",
+      "state": "Alaska",
+      "activities_nearby": [
+        "Wildlife",
+        "Photo Op",
+        "Scenery"
+      ]
     }
   ],
   "users": [
     {
       "username": "jake",
       "password": "test",
-      "favorites": [
-        "Central Park"
-      ],
+      "favorites": [],
       "id": 1
     },
     {
